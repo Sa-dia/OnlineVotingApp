@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+    android:id="@+id/main"
+android:padding="16dp"
+android:gravity="center"
+android:background="@android:color/white">
+
+<!-- Title for the Vote Result -->
+<TextView
+    android:id="@+id/resultTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Vote Results"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:textColor="@android:color/black"
+    android:gravity="center"
+    android:layout_marginBottom="16dp" />
+
+<!-- Image showing vote result chart -->
+<ImageView
+    android:id="@+id/voteResultImage"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:src="@drawable/ic_voting_result"
+    android:scaleType="fitCenter"
+    android:contentDescription="Vote result chart image" />
+
+<!-- Button for additional actions -->
+<Button
+    android:id="@+id/viewDetailsButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="View Details"
+    android:textColor="@android:color/white"
+    android:backgroundTint="@color/blue"
+    android:layout_marginTop="20dp" />
+</LinearLayout>

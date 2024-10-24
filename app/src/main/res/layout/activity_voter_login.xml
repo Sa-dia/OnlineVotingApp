@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@android:color/white">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/voterLoginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voter Login"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:layout_marginBottom="30dp" />
+
+    <!-- NID Input Field -->
+    <EditText
+        android:id="@+id/nidInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter NID Number"
+        android:inputType="number"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/gray_light" />
+
+    <!-- Email Input Field -->
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/gray_light" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/blue"
+        android:layout_marginTop="10dp" />
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register For new User"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/green"
+        android:onClick="goToRegisterPage"
+        android:layout_marginTop="10dp" />
+
+    <!-- Result Button -->
+    <Button
+        android:id="@+id/resultButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="See Result"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/red"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:layout_gravity="center"
+        android:onClick="seeVoteResult"/>
+</LinearLayout>
