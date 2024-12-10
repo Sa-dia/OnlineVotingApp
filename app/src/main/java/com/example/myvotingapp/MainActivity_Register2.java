@@ -20,10 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity_Register2 extends AppCompatActivity {
 
     private static final int PICK_IMAGE_REQUEST = 1;
-    private static final int PICK_NID_FILE_REQUEST = 2;
 
     private Uri imageUri;
-    private Uri nidFileUri;
 
     // Firebase database reference
     private DatabaseReference databaseReference;
@@ -44,11 +42,10 @@ public class MainActivity_Register2 extends AppCompatActivity {
         });
 
         EditText nameInput = findViewById(R.id.nameInput);
-        EditText phoneInput = findViewById(R.id.phoneInput);
-        EditText nidInput = findViewById(R.id.nidInput);
         EditText emailInput = findViewById(R.id.emailInput);
+        EditText passwordInput = findViewById(R.id.passwordInput);
+        EditText voterIdInput = findViewById(R.id.voterIdInput);
         Button uploadImageButton = findViewById(R.id.uploadImageButton);
-        Button uploadNIDFileButton = findViewById(R.id.uploadNIDFileButton);
         Button registerButton = findViewById(R.id.registerButton);
 
         RadioGroup genderRadioGroup = findViewById(R.id.genderRadioGroup);
@@ -63,19 +60,12 @@ public class MainActivity_Register2 extends AppCompatActivity {
             startActivityForResult(intent, PICK_IMAGE_REQUEST);
         });
 
-        // Handle Upload NID File button click
-        uploadNIDFileButton.setOnClickListener(view -> {
-            Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-            intent.setType("*/*");
-            startActivityForResult(intent, PICK_NID_FILE_REQUEST);
-        });
-
         // Handle Register button click
         registerButton.setOnClickListener(view -> {
             String name = nameInput.getText().toString();
-            String phone = phoneInput.getText().toString();
-            String nid = nidInput.getText().toString();
             String email = emailInput.getText().toString();
+            String password = passwordInput.getText().toString();
+            String voterId = voterIdInput.getText().toString();
 
             // Get selected gender
             int selectedGenderId = genderRadioGroup.getCheckedRadioButtonId();
@@ -88,15 +78,18 @@ public class MainActivity_Register2 extends AppCompatActivity {
                 gender = "Other";
             }
 
+            // Default voting status
+            String votingStatus = "No";
+
             // Check if all fields are filled
-            if (name.isEmpty() || phone.isEmpty() || nid.isEmpty() || email.isEmpty() || gender == null) {
+            if (name.isEmpty() || email.isEmpty() || password.isEmpty() || voterId.isEmpty() || gender == null) {
                 Toast.makeText(MainActivity_Register2.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
-            } else if (imageUri == null || nidFileUri == null) {
-                Toast.makeText(MainActivity_Register2.this, "Please upload your image and NID file", Toast.LENGTH_SHORT).show();
+            } else if (imageUri == null) {
+                Toast.makeText(MainActivity_Register2.this, "Please upload your image", Toast.LENGTH_SHORT).show();
             } else {
                 // Create a User object
                 String userId = databaseReference.push().getKey(); // Generate unique ID for the user
-                User user = new User(name, phone, nid, email, gender, imageUri.toString(), nidFileUri.toString());
+                User user = new User(name, email, password, voterId, gender, votingStatus, imageUri.toString());
 
                 // Store user data in Firebase
                 databaseReference.child(userId).setValue(user)
@@ -117,9 +110,6 @@ public class MainActivity_Register2 extends AppCompatActivity {
             if (requestCode == PICK_IMAGE_REQUEST) {
                 imageUri = data.getData();
                 Toast.makeText(this, "Image selected successfully", Toast.LENGTH_SHORT).show();
-            } else if (requestCode == PICK_NID_FILE_REQUEST) {
-                nidFileUri = data.getData();
-                Toast.makeText(this, "NID file selected successfully", Toast.LENGTH_SHORT).show();
             }
         }
     }

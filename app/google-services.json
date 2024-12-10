@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "674277145130",
-    "project_id": "online-voting-system-213ae",
-    "storage_bucket": "online-voting-system-213ae.appspot.com"
+    "project_number": "882423211137",
+    "project_id": "online-voting-system-63f13",
+    "storage_bucket": "online-voting-system-63f13.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:674277145130:android:a85f04d496b93c09846153",
+        "mobilesdk_app_id": "1:882423211137:android:fca9d2cebdabda94e7d980",
         "android_client_info": {
           "package_name": "com.example.myvotingapp"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDlsgLjm82BArb3_XcGJWyJYDJBcEZaG1A"
+          "current_key": "AIzaSyAg8jM9N_gvSYFvDyaH38IZtSayqeJHnV4"
         }
       ],
       "services": {

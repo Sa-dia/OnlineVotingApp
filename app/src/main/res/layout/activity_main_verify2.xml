@@ -6,98 +6,67 @@
     android:gravity="center"
     android:padding="20dp"
     android:id="@+id/main"
-    android:background="@android:color/white">
+    android:background="@drawable/candi_back">
 
     <!-- Title -->
     <TextView
         android:id="@+id/identifyVerificationTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Identify Verification"
+        android:text="User Verification"
         android:textSize="26sp"
         android:textColor="@android:color/black"
         android:textStyle="bold"
         android:gravity="center"
         android:paddingBottom="40dp" />
 
-    <!-- Voter Login Button with Image -->
+    <!-- User Image -->
+    <ImageView
+        android:id="@+id/userLoginImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/login_icon"
+        android:contentDescription="User Login Image"
+        android:layout_gravity="center" />
+
+    <!-- Buttons Row -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginBottom="20dp">
+        android:layout_marginTop="20dp">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/voter_icon"
-            android:contentDescription="Voter Icon"
-            android:layout_marginEnd="10dp" />
-
+        <!-- Voter Login Button -->
         <Button
             android:id="@+id/voterLoginButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:text="Voter Login"
             android:textColor="@android:color/white"
-            android:backgroundTint="@color/green"
-            android:textSize="18sp"
-            android:padding="12dp"
-            android:onClick="goToVoterLogin" />
-    </LinearLayout>
+            android:backgroundTint="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="5dp"
+            android:onClick="goToVoterLogin"
+            android:layout_margin="10dp" />
 
-    <!-- Candidate Login Button with Image -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginBottom="20dp">
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/candidate_icon"
-            android:contentDescription="Candidate Icon"
-            android:layout_marginEnd="10dp" />
-
-        <Button
-            android:id="@+id/candidateLoginButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Candidate Login"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/red"
-            android:textSize="18sp"
-            android:padding="12dp"
-            android:onClick="goToCandidateLogin" />
-    </LinearLayout>
-
-    <!-- Admin Login Button with Image -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/admin_icon"
-            android:contentDescription="Admin Icon"
-            android:layout_marginEnd="10dp" />
-
+        <!-- Admin Login Button -->
         <Button
             android:id="@+id/adminLoginButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:text="Admin Login"
             android:textColor="@android:color/white"
-            android:backgroundTint="@color/blue"
-            android:textSize="18sp"
-            android:padding="12dp"
-            android:onClick="goToAdminLogin" />
+            android:backgroundTint="@color/darker_gray"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="5dp"
+            android:onClick="goToAdminLogin"
+            android:layout_margin="10dp" />
     </LinearLayout>
 
 </LinearLayout>

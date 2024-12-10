@@ -29,7 +29,12 @@ public class MainActivity_verify2 extends AppCompatActivity {
     }
 
     public void goToAdminLogin(View view) {
-        Intent intent = new Intent(MainActivity_verify2.this, activity_voter_login.class);
+        Intent intent = new Intent(MainActivity_verify2.this, Admin_Login.class);
+        startActivity(intent);
+    }
+
+    public void goToCandidateRegister(View view) {
+        Intent intent = new Intent(MainActivity_verify2.this, Candidate_Register.class);
         startActivity(intent);
     }
 

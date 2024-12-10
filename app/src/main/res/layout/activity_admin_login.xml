@@ -1,10 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin_Login">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@id/main"
+    android:background="@drawable/candi_back"
+    android:padding="20dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Admin Login Title -->
+    <TextView
+        android:id="@+id/adminLoginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin Login"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/AdminLoginImage"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/admin_icon"
+        android:contentDescription="Voter Login Image"
+        android:layout_gravity="center" />
+
+    <!-- Admin Email Input -->
+    <EditText
+        android:id="@+id/adminEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+
+        android:inputType="textEmailAddress" />
+
+    <!-- Admin Password Input -->
+    <EditText
+        android:id="@+id/adminPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:padding="12dp"
+        android:layout_marginBottom="32dp"
+
+        android:inputType="textPassword" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/adminLoginButton"
+        android:layout_width="273dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/black"
+        android:onClick="onAdminLoginClick"
+        android:padding="12dp"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="272dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/darker_gray"
+        android:onClick="goToAdminRegisterPage"
+        android:text="Register New Admin"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>

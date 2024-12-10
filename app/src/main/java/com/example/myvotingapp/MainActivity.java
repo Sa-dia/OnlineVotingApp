@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void goToLoginPage(View view) {
         // Intent to navigate to LoginActivity
-        Intent intent = new Intent(MainActivity.this, MainActivity_verify2.class);
+        Intent intent = new Intent(MainActivity.this, Welcome_Activity.class);
         startActivity(intent);
     }
 }

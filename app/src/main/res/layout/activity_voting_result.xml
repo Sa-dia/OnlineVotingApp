@@ -1,41 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-    android:id="@+id/main"
-android:padding="16dp"
-android:gravity="center"
-android:background="@android:color/white">
-
-<!-- Title for the Vote Result -->
-<TextView
-    android:id="@+id/resultTitle"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Vote Results"
-    android:textSize="24sp"
-    android:textStyle="bold"
-    android:textColor="@android:color/black"
-    android:gravity="center"
-    android:layout_marginBottom="16dp" />
-
-<!-- Image showing vote result chart -->
-<ImageView
-    android:id="@+id/voteResultImage"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
-    android:src="@drawable/ic_voting_result"
-    android:scaleType="fitCenter"
-    android:contentDescription="Vote result chart image" />
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:padding="16dp">
 
-<!-- Button for additional actions -->
-<Button
-    android:id="@+id/viewDetailsButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="View Details"
-    android:textColor="@android:color/white"
-    android:backgroundTint="@color/blue"
-    android:layout_marginTop="20dp" />
+    <TextView
+        android:id="@+id/electionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Election Results"
+        android:textSize="24sp"
+        android:layout_gravity="center"/>
+        <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/voteBarChart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/voterPieChart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+    <TextView
+        android:id="@+id/totalVoters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Voters: 0"
+        android:paddingTop="16dp"/>
+
+    <TextView
+        android:id="@+id/totalMaleVoters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Male Voters: 0"/>
+
+    <TextView
+        android:id="@+id/totalFemaleVoters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Female Voters: 0"/>
+
 </LinearLayout>

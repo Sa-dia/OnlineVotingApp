@@ -1,10 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Candidate_Register">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:id="@+id/main"
+    android:background="@drawable/candi_back"> <!-- Set the background image here -->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Field for Candidate Name -->
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Candidate Name"
+        android:inputType="textPersonName"
+        android:padding="8dp" />
+
+    <!-- Field for Candidate Email -->
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Candidate Email"
+        android:inputType="textEmailAddress"
+        android:padding="8dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/imageUploadLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Your Image"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <!-- ImageView for displaying selected image -->
+    <ImageView
+        android:id="@+id/candidateImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:layout_margin="16dp"
+        android:background="@android:color/darker_gray" />
+
+    <!-- Button to Browse Image -->
+    <Button
+        android:id="@+id/uploadImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Browse"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Button to Add Candidate -->
+    <Button
+        android:id="@+id/btn_add_candidate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Candidate"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
