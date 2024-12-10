@@ -6,40 +6,56 @@
     android:id="@+id/main"
     android:padding="16dp">
 
+    <!-- Election Title -->
     <TextView
         android:id="@+id/electionTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Election Results"
         android:textSize="24sp"
-        android:layout_gravity="center"/>
-        <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/voteBarChart"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"/>
+        android:layout_gravity="center"
+        android:paddingBottom="16dp"/>
 
-        <com.github.mikephil.charting.charts.PieChart
-        android:id="@+id/voterPieChart"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"/>
+    <!-- Table for displaying candidates' results -->
+    <TableLayout
+        android:id="@+id/tableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1"
+    android:paddingTop="16dp"
+    android:layout_marginBottom="16dp">
 
-    <TextView
-        android:id="@+id/totalVoters"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total Voters: 0"
-        android:paddingTop="16dp"/>
+    <!-- Header row -->
+    <TableRow>
+        <TextView android:text="Candidate Name" android:padding="8dp"/>
+        <TextView android:text="Symbol Name" android:padding="8dp"/>
+        <TextView android:text="Vote Count" android:padding="8dp"/>
+    </TableRow>
 
-    <TextView
-        android:id="@+id/totalMaleVoters"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total Male Voters: 0"/>
+    <!-- Candidate rows will be added dynamically here -->
 
-    <TextView
-        android:id="@+id/totalFemaleVoters"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total Female Voters: 0"/>
+</TableLayout>
 
-</LinearLayout>
+    <!-- Total Voters -->
+<TextView
+android:id="@+id/totalVoters"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Total Voters: 0"
+android:paddingTop="16dp"/>
+
+    <!-- Total Male Voters -->
+<TextView
+android:id="@+id/totalMaleVoters"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Total Male Voters: 0"/>
+
+    <!-- Total Female Voters -->
+<TextView
+android:id="@+id/totalFemaleVoters"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Total Female Voters: 0"/>
+
+    </LinearLayout>
