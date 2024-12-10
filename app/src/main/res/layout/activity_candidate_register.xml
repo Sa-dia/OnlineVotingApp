@@ -6,13 +6,23 @@
     android:padding="16dp"
     android:id="@+id/main"
     android:background="@drawable/candi_back"> <!-- Set the background image here -->
-
+    <TextView
+        android:id="@+id/candidateRegTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Candidate Register"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp" />
     <!-- Field for Candidate Name -->
     <EditText
         android:id="@+id/et_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Candidate Name"
+        android:drawableLeft="@drawable/name_icon"
         android:inputType="textPersonName"
         android:padding="8dp" />
 
@@ -22,6 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Candidate Email"
+        android:drawableLeft="@drawable/email_icon"
         android:inputType="textEmailAddress"
         android:padding="8dp"
         android:layout_marginTop="8dp" />
@@ -51,15 +62,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Browse"
+        android:backgroundTint="@color/black"
         android:layout_gravity="center"
         android:layout_marginBottom="16dp" />
 
     <!-- Button to Add Candidate -->
     <Button
         android:id="@+id/btn_add_candidate"
-        android:layout_width="match_parent"
+        android:layout_width="268dp"
         android:layout_height="wrap_content"
-        android:text="Add Candidate"
-        android:layout_marginTop="16dp" />
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/darker_gray"
+        android:text="Add Candidate" />
 
 </LinearLayout>

@@ -69,13 +69,15 @@ public class MainActivity_Register2 extends AppCompatActivity {
 
             // Get selected gender
             int selectedGenderId = genderRadioGroup.getCheckedRadioButtonId();
-            String gender = null;
+            String gender;
             if (selectedGenderId == maleRadioButton.getId()) {
                 gender = "Male";
             } else if (selectedGenderId == femaleRadioButton.getId()) {
                 gender = "Female";
             } else if (selectedGenderId == otherRadioButton.getId()) {
                 gender = "Other";
+            } else {
+                gender = null;
             }
 
             // Default voting status
@@ -87,17 +89,29 @@ public class MainActivity_Register2 extends AppCompatActivity {
             } else if (imageUri == null) {
                 Toast.makeText(MainActivity_Register2.this, "Please upload your image", Toast.LENGTH_SHORT).show();
             } else {
-                // Create a User object
-                String userId = databaseReference.push().getKey(); // Generate unique ID for the user
-                User user = new User(name, email, password, voterId, gender, votingStatus, imageUri.toString());
+                // Check if the email already exists in the Firebase database
+                databaseReference.orderByChild("email").equalTo(email).get()
+                        .addOnCompleteListener(task -> {
+                            if (task.isSuccessful() && task.getResult().exists()) {
+                                // Email already exists, show an error message
+                                Toast.makeText(MainActivity_Register2.this, "This email is already registered", Toast.LENGTH_SHORT).show();
+                            } else {
+                                // Create a User object
+                                String userId = databaseReference.push().getKey(); // Generate unique ID for the user
+                                User user = new User(name, email, password, voterId, gender, votingStatus, imageUri.toString());
 
-                // Store user data in Firebase
-                databaseReference.child(userId).setValue(user)
-                        .addOnSuccessListener(aVoid -> {
-                            Toast.makeText(MainActivity_Register2.this, "Registration Successful!", Toast.LENGTH_SHORT).show();
+                                // Store user data in Firebase
+                                databaseReference.child(userId).setValue(user)
+                                        .addOnSuccessListener(aVoid -> {
+                                            Toast.makeText(MainActivity_Register2.this, "Registration Successful!", Toast.LENGTH_SHORT).show();
+                                        })
+                                        .addOnFailureListener(e -> {
+                                            Toast.makeText(MainActivity_Register2.this, "Registration Failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                        });
+                            }
                         })
                         .addOnFailureListener(e -> {
-                            Toast.makeText(MainActivity_Register2.this, "Registration Failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity_Register2.this, "Error checking email: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                         });
             }
         });
