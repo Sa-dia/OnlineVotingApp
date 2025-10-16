@@ -1,4 +1,4 @@
-**This repository is about an Online Voting System App which can perform the voting securely and also shows the result realtime statistics**
+***This repository is about an Online Voting System App which can perform the voting securely and also shows the result realtime statistics***
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4c1690d5-6d4c-4b93-9d21-198e0b656f48" width="200" height="400"/> &nbsp;&nbsp;&nbsp;
