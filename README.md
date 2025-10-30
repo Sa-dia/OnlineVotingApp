@@ -11,3 +11,54 @@
   <img src="https://github.com/user-attachments/assets/3209a03f-42f4-47c4-b5fc-09b7e248b81d" width="200" height="400"/> &nbsp;&nbsp;&nbsp;
   <img src="https://github.com/user-attachments/assets/ce14b2ff-72ed-4d4f-b70f-3cb2ce44142b" width="200" height="400"/>
 </p>
+# 🗳️ Online Voting App
+
+A **secure and user-friendly Android application** designed to make the voting process simple, transparent, and accessible.  
+Developed in **Android Studio**, this app allows users to register, verify their identity, and cast votes electronically with ease.
+
+---
+
+## 🚀 Motivation
+
+The motivation behind this project is to **modernize and digitize the voting process**, reducing manual effort and increasing participation.  
+In traditional voting systems, physical presence and paperwork often discourage participation.  
+This app provides a **secure, paperless, and convenient** platform for conducting elections — whether in **schools, colleges, or organizations** — while ensuring data integrity and fairness.
+
+---
+
+## 🧠 Key Features
+
+- 🧾 **User Registration & Authentication**  
+  Users can register with personal details and verify identity before voting.
+
+- 🪪 **Document Upload**  
+  Upload image and ID proof (such as birth certificate or NID) during registration.
+
+- ✅ **Vote Casting**  
+  Securely cast your vote for preferred candidates with one-tap selection.
+
+- 📊 **Live Result Display**  
+  Real-time vote count and winner announcement.
+
+- 🧑‍💼 **Admin Dashboard**  
+  Admins can view total votes, verify voters, and manage candidates.
+
+- 🔒 **Secure Data Handling**  
+  User details and votes are stored safely using local and/or backend storage.
+
+- 📱 **Modern & Intuitive UI**  
+  Clean, easy-to-navigate interface for all users.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Android Studio (Java / Kotlin)**
+- **XML** for UI design
+- **Firebase / SQLite** for backend & data storage *(depending on your implementation)*
+- **Material Design Components**
+
+---
+
+## 🧩 App Structure
+
