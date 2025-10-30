@@ -48,7 +48,7 @@ This app provides a **secure, paperless, and convenient** platform for conductin
 ---
 
 ## 🧩 App Structure
-
+```
 Online-Voting-App/
 ├── app/
 │ ├── src/
@@ -67,7 +67,7 @@ Online-Voting-App/
 │ └── build.gradle
 ├── screenshots/
 └── README.md
-
+```
 ---
 
 ## 🖼️ Screenshots
