@@ -93,14 +93,14 @@ Online-Voting-App/
 
 ---
 
-### 🔐 Login Screen
+### 🧑‍💼 Admin Dashboard Screen
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8186e3be-4e72-4e9e-abc2-f682dcc2013c" width="200" height="400"/>
 </p>
 
 ---
 
-### 🗳️ Voting Interface
+### 🔐 Login Interface
 <p align="center">
   <img src="https://github.com/user-attachments/assets/3209a03f-42f4-47c4-b5fc-09b7e248b81d" width="200" height="400"/>
 </p>
