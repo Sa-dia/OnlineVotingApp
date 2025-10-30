@@ -68,7 +68,6 @@ Online-Voting-App/
 ├── screenshots/
 └── README.md
 
-
 ---
 
 ## 🖼️ Screenshots
